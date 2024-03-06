@@ -41,9 +41,13 @@ function removerItem(){
 
         if(celulaNome && celulaNome.innerHTML === nomeParaRemover){
             tabela.deleteRow(i);
+            document.getElementById("nomeRemover").value = "";
             return;
+            
+        } else{
+            alert("Digite um nome existente")
         }
-        alert("Digite um nome existente")
+        document.getElementById("nomeRemover").value = "";
     }
 }
 
